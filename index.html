@@ -6,66 +6,130 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-black min-h-screen flex items-center justify-center font-sans antialiased">
-  <main class="w-full max-w-2xl mx-auto px-6 py-12">
+<body class="bg-gradient-to-br from-orange-50 via-white to-yellow-100 min-h-screen flex items-center justify-center font-sans antialiased">
+  <main class="w-full max-w-3xl mx-auto px-4 py-10">
     <!-- Orange Badge -->
     <div class="flex flex-col items-center mb-10 mt-8">
-      <span class="mb-4 rounded-full px-5 py-2 border border-orange-500 bg-orange-900/60 text-orange-200 text-xs font-bold uppercase tracking-wider shadow-lg">
+      <span class="mb-4 rounded-full px-5 py-2 border border-orange-500 bg-orange-100 text-orange-800 text-xs font-bold uppercase tracking-wider shadow">
         AI Cofounder Platform
       </span>
-      
-      <h1 class="text-4xl md:text-5xl font-extrabold text-orange-500 mb-6 text-center drop-shadow-xl mb-">
-        Build, Launch, and Grow </h1>
-      <h2 class="text-5xl md:text-6xl font-extrabold text-red-500 mb-6 text-center leading-tight drop-shadow-xl mb-10 ">With an AI-Powered Cofounder</h2>
-      <!-- Expanded Subheadline -->
-      <p class="text-lg md:text-2xl text-gray-200 text-center mb-6 max-w-2xl mx-auto px-2">
-        <span class="font-semibold text-orange-400">Myfounder</span> is your all-in-one digital cofounder — giving founders AI chat, automatic roadmaps, live feedback, market validation tools, founder-matching, and a supportive community. 
-        <br class="hidden sm:inline"><span class="text-orange-300">Go from idea to revenue, with AI by your side—join our early access waitlist now to influence the roadmap & unlock lifetime perks.</span>
+      <h1 class="text-4xl md:text-5xl font-extrabold text-orange-600 mb-3 text-center drop-shadow-xl">
+        Build, Launch, and Grow
+      </h1>
+      <h2 class="text-5xl md:text-6xl font-extrabold text-red-400 mb-5 text-center leading-tight drop-shadow-xl">
+        With an AI-Powered Cofounder
+      </h2>
+      <p class="text-lg md:text-2xl text-gray-700 text-center mb-6 max-w-2xl mx-auto px-2">
+        <span class="font-semibold text-orange-500">Myfounder</span> is your all-in-one digital cofounder — giving founders AI chat, automatic roadmaps, live feedback, market validation tools, founder-matching, and a supportive community.<br>
+        <span class="text-orange-400">Go from idea to revenue, with AI by your side—join our early access waitlist now to influence the roadmap & unlock lifetime perks.</span>
       </p>
-      <!-- Social/FOMO Proof -->
       <div class="flex flex-wrap justify-center gap-3 mb-2">
-        <span class="inline-flex items-center rounded bg-black/80 px-4 py-1 text-xs font-medium text-orange-300 border border-orange-600">
+        <span class="inline-flex items-center rounded bg-orange-100 px-4 py-1 text-xs font-medium text-orange-600 border border-orange-300">
           🤖 5+ Startup Tools & AI
         </span>
-        <span class="inline-flex items-center rounded bg-black/70 px-4 py-1 text-xs font-medium text-yellow-400 border border-orange-500">
+        <span class="inline-flex items-center rounded bg-yellow-100 px-4 py-1 text-xs font-medium text-yellow-700 border border-orange-200">
           🚀 Early Adopters = Lifetime Perks
         </span>
       </div>
     </div>
     <!-- Glassmorphic Form Card -->
-    <section class="rounded-3xl shadow-2xl bg-white/10 backdrop-blur-lg border border-orange-700 p-10 mb-6 max-w-xl mx-auto flex flex-col items-center">
-      <h2 class="text-3xl font-bold text-orange-300 mb-2 text-center">Reserve Your Early Spot</h2>
-      <p class="text-orange-200 text-base font-medium mb-7 text-center px-4">
+    <section class="rounded-3xl shadow-xl bg-white/60 backdrop-blur-lg border border-orange-200 p-10 mb-8 max-w-xl mx-auto flex flex-col items-center">
+      <h2 class="text-3xl font-bold text-orange-500 mb-2 text-center">Reserve Your Early Spot</h2>
+      <p class="text-orange-700 text-base font-medium mb-7 text-center px-4">
         Shape the platform, join exclusive beta events & connect with founders driving the next era of SaaS.
       </p>
       <form id="waitlistForm" class="w-full space-y-5" autocomplete="on">
         <div>
-          <label class="block text-base font-bold text-orange-300 mb-1" for="name">Name</label>
-          <input required name="name" id="name" type="text" placeholder="Your Name" 
-            class="w-full rounded-xl border border-orange-600 bg-black/40 px-5 py-4 text-orange-200 placeholder-orange-300 focus:ring-2 focus:ring-orange-400 focus:outline-none" />
+          <label class="block text-base font-bold text-orange-500 mb-1" for="name">Name</label>
+          <input required name="name" id="name" type="text" placeholder="Your Name"
+            class="w-full rounded-xl border border-orange-300 bg-orange-50 px-5 py-4 text-orange-800 placeholder-orange-300 focus:ring-2 focus:ring-orange-400 focus:outline-none" />
         </div>
         <div>
-          <label class="block text-base font-bold text-orange-300 mb-1" for="email">Email</label>
+          <label class="block text-base font-bold text-orange-500 mb-1" for="email">Email</label>
           <input required name="email" id="email" type="email" placeholder="you@startup.com"
-            class="w-full rounded-xl border border-orange-600 bg-black/40 px-5 py-4 text-orange-200 placeholder-orange-300 focus:ring-2 focus:ring-orange-400 focus:outline-none" />
+            class="w-full rounded-xl border border-orange-300 bg-orange-50 px-5 py-4 text-orange-800 placeholder-orange-300 focus:ring-2 focus:ring-orange-400 focus:outline-none" />
         </div>
         <div>
-          <label class="block text-base font-bold text-orange-300 mb-1" for="saas">Your SaaS / Product / Idea</label>
+          <label class="block text-base font-bold text-orange-500 mb-1" for="saas">Your SaaS / Product / Idea</label>
           <input required name="saas" id="saas" type="text" placeholder="e.g. appname.com, Notion for X, AI marketing tool"
-            class="w-full rounded-xl border border-orange-600 bg-black/40 px-5 py-4 text-orange-200 placeholder-orange-300 focus:ring-2 focus:ring-orange-400 focus:outline-none" />
+            class="w-full rounded-xl border border-orange-300 bg-orange-50 px-5 py-4 text-orange-800 placeholder-orange-300 focus:ring-2 focus:ring-orange-400 focus:outline-none" />
         </div>
-        <button type="submit" 
-          class="w-full py-4 mt-3 rounded-xl bg-gradient-to-r from-orange-500 via-orange-400 to-yellow-400 text-black text-xl font-extrabold shadow-xl transition-transform hover:scale-105 hover:from-orange-600 hover:to-yellow-500">
+        <button type="submit"
+          class="w-full py-4 mt-3 rounded-xl bg-gradient-to-r from-orange-500 via-orange-400 to-yellow-400 text-white text-xl font-extrabold shadow-xl transition-transform hover:scale-105 hover:from-orange-600 hover:to-yellow-500">
           Join the Waitlist →
         </button>
       </form>
-      <p id="confirmation" class="mt-7 hidden text-center text-green-400 font-bold text-xl">✅ You’re in! We’ll email exciting next steps soon.</p>
-      <!-- Launch info -->
+      <p id="confirmation" class="mt-7 hidden text-center text-green-600 font-bold text-xl">✅ You’re in! We'll email next steps soon.</p>
       <div class="mt-5 flex flex-col items-center">
-        <span class="font-mono text-sm text-orange-500 bg-black/60 border border-orange-700 rounded px-3 py-1 shadow">Beta Launch: Q1 2026 &nbsp;|&nbsp; Founding user price: $40/mo</span>
+        <span class="font-mono text-sm text-orange-600 bg-orange-100 border border-orange-300 rounded px-3 py-1 shadow">Beta Launch: Q1 2026 &nbsp;|&nbsp; Founding user price: $40/mo</span>
       </div>
     </section>
-    <!-- Optionally, add FAQ, feature list, or footer here -->
+    <!-- Features Grid -->
+    <section class=" rounded-3xl shadow-xl bg-white/70 border border-orange-200 p-8 max-w-2xl mx-auto flex flex-col items-center mb-8">
+      <h2 class="text-3xl font-bold text-orange-600 mb-6 text-center">Platform Features</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
+        <!-- Feature 1 -->
+        <div class="bg-orange-50 border border-orange-200 rounded-xl p-6 flex flex-col space-y-3 shadow">
+          <h3 class="text-xl font-extrabold text-orange-700 mb-2">Premade AI Personalities</h3>
+          <p class="text-orange-900 text-sm mb-2">Choose from a gallery of unique AI personalities for your cofounder, each with a behavior profile so you know who you want to build with.</p>
+          <div class="rounded-lg border border-orange-300 bg-white px-4 py-3 text-xs text-gray-700 font-mono">
+            <span class="font-bold text-orange-600">FounderBot: </span> “I'm analytical and love validating ideas. Let's review your last feature and risk together!”
+          </div>
+        </div>
+        <!-- Feature 2 -->
+        <div class="bg-orange-50 border border-orange-200 rounded-xl p-6 flex flex-col space-y-3 shadow">
+          <h3 class="text-xl font-extrabold text-orange-700 mb-2">Real-time Chat</h3>
+          <p class="text-orange-900 text-sm mb-2">Chat instantly with your selected AI or community—for advice, strategy, or support whenever you need.</p>
+          <div class="rounded-lg border border-orange-300 bg-white px-4 py-3 text-xs text-gray-700 font-mono">
+            <span class="font-bold text-orange-600">You: </span> “What's the next most valuable task for my project?”
+            <br><span class="font-bold text-orange-600">AI Cofounder: </span> “Let's focus on getting more early users—try a referral reward feature.”
+          </div>
+        </div>
+        <!-- Feature 3 -->
+        <div class="bg-orange-50 border border-orange-200 rounded-xl p-6 flex flex-col space-y-3 shadow">
+          <h3 class="text-xl font-extrabold text-orange-700 mb-2">Task Management</h3>
+          <p class="text-orange-900 text-sm mb-2">Track key tasks, prioritize and get status updates from your AI cofounder who helps keep your project on schedule.</p>
+          <div class="rounded-lg border border-orange-300 bg-white px-4 py-3 text-xs text-gray-700 font-mono">
+            <span class="font-bold text-orange-600">AI Cofounder: </span> “Updating project roadmap and task deadline to October 7.”
+          </div>
+        </div>
+        <!-- Feature 4 -->
+        <div class="bg-orange-50 border border-orange-200 rounded-xl p-6 flex flex-col space-y-3 shadow">
+          <h3 class="text-xl font-extrabold text-orange-700 mb-2">New Feature Suggestion</h3>
+          <p class="text-orange-900 text-sm mb-2">Influence the platform’s evolution by suggesting features. The best ideas get built and rewarded.</p>
+          <div class="rounded-lg border border-orange-300 bg-white px-4 py-3 text-xs text-gray-700 font-mono">
+            <span class="font-bold text-orange-600">You: </span> “Can we add user feedback charts?”
+            <br><span class="font-bold text-orange-600">Platform: </span> “Feedback charts added to next sprint!”
+          </div>
+        </div>
+        <!-- Feature 5 -->
+        <div class="bg-orange-50 border border-orange-200 rounded-xl p-6 flex flex-col space-y-3 shadow">
+          <h3 class="text-xl font-extrabold text-orange-700 mb-2">Marketing Help</h3>
+          <p class="text-orange-900 text-sm mb-2">Get automated ideas and templates for social posts, ads, and email—all tailored to your SaaS category and goals.</p>
+          <div class="rounded-lg border border-orange-300 bg-white px-4 py-3 text-xs text-gray-700 font-mono">
+            <span class="font-bold text-orange-600">AI Cofounder: </span> “Try a LinkedIn write-up highlighting your progress to date and founder story.”
+          </div>
+        </div>
+        <!-- Feature 6 -->
+        <div class="bg-orange-50 border border-orange-200 rounded-xl p-6 flex flex-col space-y-3 shadow">
+          <h3 class="text-xl font-extrabold text-orange-700 mb-2">Money Spend Recommendation</h3>
+          <p class="text-orange-900 text-sm mb-2">Let AI help you decide where to spend and budget (e.g., ad spend, sponsor deals, hiring) to maximize growth and ROI.</p>
+          <div class="rounded-lg border border-orange-300 bg-white px-4 py-3 text-xs text-gray-700 font-mono">
+            <span class="font-bold text-orange-600">AI Cofounder: </span> “Based on your goals, allocate $150 to X Ads and $50 to industry newsletter sponsorship.”
+          </div>
+        </div>
+        <!-- Feature 7 -->
+        <div class="bg-orange-50 border border-orange-200 rounded-xl p-6 flex flex-col space-y-3 shadow">
+          <h3 class="text-xl font-extrabold text-orange-700 mb-2">Data Visualization</h3>
+          <p class="text-orange-900 text-sm mb-2">Visualize your user growth, feature adoption, and campaign ROI—turn raw data into founder-friendly insights.</p>
+          <div class="rounded-lg border border-orange-300 bg-white px-4 py-3 text-xs text-gray-700 font-mono">
+            <span class="font-bold text-orange-600">AI Cofounder: </span> “Here’s your growth chart. Active users doubled since last release.” <br>
+            <span class="inline-block bg-orange-100 text-orange-800 px-2 py-1 rounded text-xs font-bold mt-1">[ Sample Chart ]</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Optionally: Add more sections (FAQ, Testimonials, Footer) here -->
   </main>
   <script>
     const form = document.getElementById('waitlistForm');
