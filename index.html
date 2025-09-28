@@ -2,64 +2,70 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>myfounder – AI Cofounder Waitlist</title>
+  <title>myfounder – Your AI Cofounder Waitlist</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gradient-to-br from-orange-100 via-white to-yellow-100 min-h-screen flex items-center justify-center font-sans antialiased">
-  <main class="w-full max-w-lg mx-auto px-4">
-    <!-- Orange Gradient Badge -->
-    <div class="flex flex-col items-center mt-10 mb-8">
-      <span class="mb-4 rounded-full px-4 py-1 border border-orange-300 bg-orange-50 text-orange-700 text-xs font-bold uppercase tracking-wider shadow">
+<body class="bg-black min-h-screen flex items-center justify-center font-sans antialiased">
+  <main class="w-full max-w-2xl mx-auto px-6 py-12">
+    <!-- Orange Badge -->
+    <div class="flex flex-col items-center mb-10 mt-8">
+      <span class="mb-4 rounded-full px-5 py-2 border border-orange-500 bg-orange-900/60 text-orange-200 text-xs font-bold uppercase tracking-wider shadow-lg">
         AI Cofounder Platform
       </span>
-      <!-- Headline -->
-      <h1 class="text-4xl sm:text-5xl font-extrabold text-orange-800 mb-4 text-center leading-tight drop-shadow-md">
-        Build and Launch Better Startups<br>
-        with <span class="text-orange-500">AI-driven Cofounder</span>
+      <!-- Expanded Headline -->
+      <h1 class="text-5xl md:text-6xl font-extrabold text-orange-400 mb-6 text-center leading-tight drop-shadow-xl">
+        Build, Launch, and Grow With an AI-Powered Cofounder
       </h1>
-      <!-- Subheadline from the PDF -->
-      <p class="text-base sm:text-lg text-gray-700 text-center mb-4 max-w-xl mx-auto">
-        myfounder helps you validate, develop, collaborate, and launch your SaaS idea powered by AI.<br>
-        <span class="font-semibold text-orange-600">Automate roadmap, ideation, market research, and more.</span>
+      <!-- Expanded Subheadline -->
+      <p class="text-lg md:text-2xl text-gray-200 text-center mb-6 max-w-2xl mx-auto px-2">
+        <span class="font-semibold text-orange-400">myfounder</span> is your all-in-one digital cofounder — giving founders AI chat, automatic roadmaps, live feedback, market validation tools, founder-matching, and a supportive community. 
+        <br class="hidden sm:inline"><span class="text-orange-300">Go from idea to revenue, with AI by your side—join our early access waitlist now to influence the roadmap & unlock lifetime perks.</span>
       </p>
-      <!-- Social Proof -->
-      <div class="flex justify-center gap-2 mb-3">
-        <span class="inline-flex items-center rounded bg-white/70 px-3 py-1 text-xs font-medium shadow ring-1 ring-orange-200">
-          🤖 All-in-one founder tools
+      <!-- Social/FOMO Proof -->
+      <div class="flex flex-wrap justify-center gap-3 mb-2">
+        <span class="inline-flex items-center rounded bg-black/80 px-4 py-1 text-xs font-medium text-orange-300 border border-orange-600">
+          🤖 50+ Startup Tools in One Place
         </span>
-        <span class="inline-flex items-center rounded bg-white/70 px-3 py-1 text-xs font-medium shadow ring-1 ring-orange-200">
-          🚀 LIFETIME PERKS for early members
+        <span class="inline-flex items-center rounded bg-black/70 px-4 py-1 text-xs font-medium text-yellow-400 border border-orange-500">
+          🚀 Early Adopters = Lifetime Perks
         </span>
       </div>
     </div>
-    <!-- Glass Card Form -->
-    <section class="rounded-2xl shadow-xl bg-white/90 backdrop-blur border border-orange-200 p-8">
-      <h2 class="text-2xl font-bold text-orange-900 mb-2 text-center">Reserve Your Spot</h2>
-      <p class="text-orange-700 text-sm mb-6 text-center">
-        Early members shape the roadmap, beta features & community!
+    <!-- Glassmorphic Form Card -->
+    <section class="rounded-3xl shadow-2xl bg-white/10 backdrop-blur-lg border border-orange-700 p-10 mb-6 max-w-xl mx-auto flex flex-col items-center">
+      <h2 class="text-3xl font-bold text-orange-300 mb-2 text-center">Reserve Your Early Spot</h2>
+      <p class="text-orange-200 text-base font-medium mb-7 text-center px-4">
+        Shape the platform, join exclusive beta events & connect with founders driving the next era of SaaS.
       </p>
-      <form id="waitlistForm" class="space-y-4" autocomplete="on">
+      <form id="waitlistForm" class="w-full space-y-5" autocomplete="on">
         <div>
-          <label class="block text-sm font-bold text-orange-700 mb-1" for="name">Name</label>
-          <input required name="name" id="name" type="text" placeholder="Your Name" class="w-full rounded-lg border border-orange-200 bg-orange-50 px-4 py-3 text-orange-900 focus:ring-2 focus:ring-orange-400 focus:outline-none" />
+          <label class="block text-base font-bold text-orange-300 mb-1" for="name">Name</label>
+          <input required name="name" id="name" type="text" placeholder="Your Name" 
+            class="w-full rounded-xl border border-orange-600 bg-black/40 px-5 py-4 text-orange-200 placeholder-orange-300 focus:ring-2 focus:ring-orange-400 focus:outline-none" />
         </div>
         <div>
-          <label class="block text-sm font-bold text-orange-700 mb-1" for="email">Email</label>
-          <input required name="email" id="email" type="email" placeholder="you@company.com" class="w-full rounded-lg border border-orange-200 bg-orange-50 px-4 py-3 text-orange-900 focus:ring-2 focus:ring-orange-400 focus:outline-none" />
+          <label class="block text-base font-bold text-orange-300 mb-1" for="email">Email</label>
+          <input required name="email" id="email" type="email" placeholder="you@startup.com"
+            class="w-full rounded-xl border border-orange-600 bg-black/40 px-5 py-4 text-orange-200 placeholder-orange-300 focus:ring-2 focus:ring-orange-400 focus:outline-none" />
         </div>
         <div>
-          <label class="block text-sm font-bold text-orange-700 mb-1" for="saas">Your SaaS / Product</label>
-          <input required name="saas" id="saas" type="text" placeholder="e.g. startup.com, product deck, idea app" class="w-full rounded-lg border border-orange-200 bg-orange-50 px-4 py-3 text-orange-900 focus:ring-2 focus:ring-orange-400 focus:outline-none" />
+          <label class="block text-base font-bold text-orange-300 mb-1" for="saas">Your SaaS / Product / Idea</label>
+          <input required name="saas" id="saas" type="text" placeholder="e.g. appname.com, Notion for X, AI marketing tool"
+            class="w-full rounded-xl border border-orange-600 bg-black/40 px-5 py-4 text-orange-200 placeholder-orange-300 focus:ring-2 focus:ring-orange-400 focus:outline-none" />
         </div>
-        <button type="submit" class="w-full py-3 mt-4 rounded-lg bg-gradient-to-r from-orange-500 to-yellow-400 text-white text-lg font-extrabold shadow-xl transition-transform hover:scale-105 hover:bg-orange-600">Join Waitlist →</button>
+        <button type="submit" 
+          class="w-full py-4 mt-3 rounded-xl bg-gradient-to-r from-orange-500 via-orange-400 to-yellow-400 text-black text-xl font-extrabold shadow-xl transition-transform hover:scale-105 hover:from-orange-600 hover:to-yellow-500">
+          Join the Waitlist →
+        </button>
       </form>
-      <p id="confirmation" class="mt-6 hidden text-center text-green-700 font-semibold text-lg">✅ Awesome! You're on the waitlist. We'll update you soon.</p>
-      <div class="mt-4 flex flex-col items-center">
-        <span class="font-mono text-xs text-orange-700 bg-white border border-orange-200 rounded px-2 py-1 shadow">Launch: Q1 2026 • $40/mo early bird</span>
+      <p id="confirmation" class="mt-7 hidden text-center text-green-400 font-bold text-xl">✅ You’re in! We’ll email exciting next steps soon.</p>
+      <!-- Launch info -->
+      <div class="mt-5 flex flex-col items-center">
+        <span class="font-mono text-sm text-orange-500 bg-black/60 border border-orange-700 rounded px-3 py-1 shadow">Beta Launch: Q1 2026 &nbsp;|&nbsp; Founding user price: $40/mo</span>
       </div>
     </section>
-    <!-- Below: Optionally add features, timeline, FAQ etc. -->
+    <!-- Optionally, add FAQ, feature list, or footer here -->
   </main>
   <script>
     const form = document.getElementById('waitlistForm');
