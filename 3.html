@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Myfounder – Your AI Cofounder Waitlist</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+    .gradient-text {
+      background: linear-gradient(135deg, #f97316 0%, #ea580c 50%, #dc2626 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .floating-animation {
+      animation: float 6s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+    .hover-lift {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .hover-lift:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(249, 115, 22, 0.15);
+    }
+    .glass-morphism {
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .pulse-glow {
+      animation: pulse-glow 2s infinite;
+    }
+    @keyframes pulse-glow {
+      0%, 100% { box-shadow: 0 0 20px rgba(249, 115, 22, 0.4); }
+      50% { box-shadow: 0 0 30px rgba(249, 115, 22, 0.6); }
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-orange-50 via-white to-amber-50 min-h-screen font-sans antialiased overflow-x-hidden">
+  <!-- Background decorative elements -->
+  <div class="fixed inset-0 overflow-hidden pointer-events-none">
+    <div class="absolute -top-40 -right-40 w-80 h-80 bg-orange-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 floating-animation"></div>
+    <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-yellow-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 floating-animation" style="animation-delay: -3s;"></div>
+    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-red-200 rounded-full mix-blend-multiply filter blur-xl opacity-20 floating-animation" style="animation-delay: -1.5s;"></div>
+  </div>
+
+  <main class="relative z-10 w-full max-w-6xl mx-auto px-4 py-8">
+    <!-- Hero Section -->
+    <div class="flex flex-col items-center mb-16 mt-8">
+      <!-- Status Badge with pulse animation -->
+      <div class="mb-6 relative">
+        <span class="inline-flex items-center gap-2 rounded-full px-6 py-3 border border-orange-300 bg-white/80 glass-morphism text-orange-700 text-sm font-bold uppercase tracking-wider shadow-lg hover-lift">
+          <div class="w-2 h-2 bg-green-500 rounded-full pulse-glow"></div>
+          AI Cofounder Platform
+        </span>
+      </div>
+
+      <!-- Main Headlines -->
+      <h1 class="text-5xl md:text-7xl font-black text-center mb-4 leading-tight">
+        <span class="gradient-text">Build, Launch, and Grow</span>
+      </h1>
+      <h2 class="text-4xl md:text-6xl font-black text-center mb-8 leading-tight">
+        <span class="text-gray-800">With an </span><span class="gradient-text">AI-Powered Cofounder</span>
+      </h2>
+
+      <!-- Enhanced Description -->
+      <div class="max-w-4xl mx-auto text-center mb-10">
+        <p class="text-xl md:text-2xl text-gray-700 mb-6 leading-relaxed">
+          <span class="font-bold text-orange-600">Myfounder</span> is your all-in-one digital cofounder — giving founders AI chat, automatic roadmaps, live feedback, market validation tools, founder-matching, and a supportive community.
+        </p>
+        <p class="text-lg md:text-xl text-orange-600 font-medium">
+          Go from idea to revenue, with AI by your side—join our early access waitlist now to influence the roadmap & unlock lifetime perks.
+        </p>
+      </div>
+
+      <!-- Feature Pills -->
+      <div class="flex flex-wrap justify-center gap-4 mb-12">
+        <span class="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-orange-100 to-orange-200 px-6 py-3 text-sm font-bold text-orange-700 border border-orange-300 hover-lift">
+          🤖 5+ AI-Powered Startup Tools
+        </span>
+        <span class="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-yellow-100 to-amber-200 px-6 py-3 text-sm font-bold text-amber-700 border border-amber-300 hover-lift">
+          🚀 Early Adopters Get Lifetime Perks
+        </span>
+        <span class="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-green-100 to-emerald-200 px-6 py-3 text-sm font-bold text-emerald-700 border border-emerald-300 hover-lift">
+          ⚡ Launch Q1 2026
+        </span>
+      </div>
+    </div>
+
+    <!-- Enhanced Waitlist Form -->
+    <section class="max-w-2xl mx-auto mb-20">
+      <div class="glass-morphism rounded-3xl shadow-2xl bg-white/70 p-10 hover-lift">
+        <div class="text-center mb-8">
+          <h2 class="text-4xl font-black gradient-text mb-4">Reserve Your Early Spot</h2>
+          <p class="text-gray-700 text-lg font-medium">
+            Shape the platform, join exclusive beta events & connect with founders driving the next era of SaaS.
+          </p>
+        </div>
+
+        <form id="waitlistForm" class="space-y-6" autocomplete="on">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-sm font-bold text-gray-700 mb-2" for="name">Full Name</label>
+              <input required name="name" id="name" type="text" placeholder="Your Name"
+                class="w-full rounded-xl border-2 border-gray-200 bg-white px-5 py-4 text-gray-800 placeholder-gray-400 focus:border-orange-400 focus:ring-4 focus:ring-orange-100 focus:outline-none transition-all duration-200" />
+            </div>
+            <div>
+              <label class="block text-sm font-bold text-gray-700 mb-2" for="email">Email Address</label>
+              <input required name="email" id="email" type="email" placeholder="you@startup.com"
+                class="w-full rounded-xl border-2 border-gray-200 bg-white px-5 py-4 text-gray-800 placeholder-gray-400 focus:border-orange-400 focus:ring-4 focus:ring-orange-100 focus:outline-none transition-all duration-200" />
+            </div>
+          </div>
+          
+          <div>
+            <label class="block text-sm font-bold text-gray-700 mb-2" for="saas">Your SaaS / Product / Idea</label>
+            <input required name="saas" id="saas" type="text" placeholder="e.g. appname.com, Notion for X, AI marketing tool"
+              class="w-full rounded-xl border-2 border-gray-200 bg-white px-5 py-4 text-gray-800 placeholder-gray-400 focus:border-orange-400 focus:ring-4 focus:ring-orange-100 focus:outline-none transition-all duration-200" />
+          </div>
+
+          <button type="submit"
+            class="w-full py-5 mt-8 rounded-xl bg-gradient-to-r from-orange-500 via-orange-400 to-yellow-400 text-white text-xl font-black shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-orange-500/25 hover:from-orange-600 hover:to-yellow-500 pulse-glow">
+            Join the Waitlist →
+          </button>
+        </form>
+
+        <p id="confirmation" class="mt-8 hidden text-center text-green-600 font-bold text-xl">
+          ✅ You're in! We'll email next steps soon.
+        </p>
+
+        <div class="mt-8 text-center">
+          <div class="inline-flex items-center gap-4 bg-gradient-to-r from-orange-50 to-yellow-50 border border-orange-200 rounded-xl px-6 py-3">
+            <span class="text-sm font-bold text-orange-700">Beta Launch: Q1 2026</span>
+            <div class="w-px h-4 bg-orange-300"></div>
+            <span class="text-sm font-bold text-orange-700">Founding Price: $40/mo</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Enhanced Features Section -->
+    <section class="mb-20">
+      <div class="text-center mb-16">
+        <h2 class="text-5xl font-black gradient-text mb-6">Platform Features</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Everything you need to turn your startup idea into a thriving business, powered by cutting-edge AI technology.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Feature 1: AI Personalities -->
+        <div class="glass-morphism bg-white/60 rounded-3xl p-8 hover-lift group">
+          <div class="mb-6">
+            <div class="w-16 h-16 bg-gradient-to-br from-orange-400 to-red-500 rounded-2xl flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">
+              🤖
+            </div>
+            <h3 class="text-2xl font-black text-gray-800 mb-3">AI Personalities</h3>
+            <p class="text-gray-600 leading-relaxed">Choose your ideal AI cofounder with unique avatars and personality insights tailored to your startup style.</p>
+          </div>
+          
+          <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-lg">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-12 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center text-xl">🎯</div>
+              <div>
+                <div class="font-bold text-gray-800">Visionary AI</div>
+                <div class="text-sm text-gray-600">Bold strategies for exponential growth</div>
+              </div>
+            </div>
+            <div class="flex gap-2">
+              <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-xs font-medium">Bold</span>
+              <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Fast</span>
+              <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-medium">Strategic</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 2: Smart Chat -->
+        <div class="glass-morphism bg-white/60 rounded-3xl p-8 hover-lift group">
+          <div class="mb-6">
+            <div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-2xl flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">
+              💬
+            </div>
+            <h3 class="text-2xl font-black text-gray-800 mb-3">Smart Chat</h3>
+            <p class="text-gray-600 leading-relaxed">Get instant strategic advice and solutions through natural conversations with your AI cofounder.</p>
+          </div>
+          
+          <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-lg space-y-3">
+            <div class="flex">
+              <div class="bg-gray-100 text-gray-800 px-4 py-3 rounded-2xl rounded-bl-md max-w-xs text-sm">
+                What should I focus on this sprint?
+              </div>
+            </div>
+            <div class="flex justify-end">
+              <div class="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-3 rounded-2xl rounded-br-md max-w-xs text-sm">
+                Launch tiered pricing and collect user feedback from 10 customers.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 3: Task Management -->
+        <div class="glass-morphism bg-white/60 rounded-3xl p-8 hover-lift group">
+          <div class="mb-6">
+            <div class="w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-500 rounded-2xl flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">
+              ✅
+            </div>
+            <h3 class="text-2xl font-black text-gray-800 mb-3">Smart Tasks</h3>
+            <p class="text-gray-600 leading-relaxed">AI-prioritized to-dos that keep your startup momentum going strong with clear action items.</p>
+          </div>
+          
+          <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-lg">
+            <div class="space-y-3">
+              <div class="flex items-center gap-3">
+                <div class="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center">
+                  <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <span class="text-sm font-medium text-gray-800">Launch free trial page</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="w-5 h-5 bg-orange-400 rounded-full"></div>
+                <span class="text-sm text-gray-700">Configure Stripe payments</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="w-5 h-5 bg-gray-200 border-2 border-gray-300 rounded-full"></div>
+                <span class="text-sm text-gray-600">Schedule launch webinar</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 4: Marketing Intelligence -->
+        <div class="glass-morphism bg-white/60 rounded-3xl p-8 hover-lift group">
+          <div class="mb-6">
+            <div class="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-500 rounded-2xl flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">
+              📈
+            </div>
+            <h3 class="text-2xl font-black text-gray-800 mb-3">Marketing Intelligence</h3>
+            <p class="text-gray-600 leading-relaxed">AI-generated social posts and ad copy that resonates with your target audience and drives conversions.</p>
+          </div>
+          
+          <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-lg">
+            <div class="text-xs text-purple-600 font-bold mb-2">[AI-Generated Post]</div>
+            <div class="bg-gradient-to-r from-purple-50 to-pink-50 p-4 rounded-xl border border-purple-200">
+              <div class="font-bold text-gray-800 text-sm mb-2">🌟 Our new SaaS tool just dropped!</div>
+              <div class="text-gray-700 text-sm">Early users get exclusive lifetime rewards. Join 500+ founders already building with us.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 5: Budget Optimizer -->
+        <div class="glass-morphism bg-white/60 rounded-3xl p-8 hover-lift group">
+          <div class="mb-6">
+            <div class="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">
+              💰
+            </div>
+            <h3 class="text-2xl font-black text-gray-800 mb-3">Smart Budget</h3>
+            <p class="text-gray-600 leading-relaxed">AI-recommended spending allocation across platforms for maximum ROI and sustainable growth.</p>
+          </div>
+          
+          <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-lg space-y-3">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-8 bg-black rounded-lg flex items-center justify-center text-white text-xs font-bold">𝕏</div>
+                <span class="text-sm font-medium">Twitter Ads</span>
+              </div>
+              <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-bold">$150</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-8 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center text-white text-xs">📷</div>
+                <span class="text-sm font-medium">Instagram</span>
+              </div>
+              <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-bold">$90</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center text-white text-xs font-bold">F</div>
+                <span class="text-sm font-medium">Fiverr</span>
+              </div>
+              <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm font-bold">$60</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 6: Analytics Dashboard -->
+        <div class="glass-morphism bg-white/60 rounded-3xl p-8 hover-lift group">
+          <div class="mb-6">
+            <div class="w-16 h-16 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-2xl flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">
+              📊
+            </div>
+            <h3 class="text-2xl font-black text-gray-800 mb-3">Analytics Hub</h3>
+            <p class="text-gray-600 leading-relaxed">Beautiful, founder-friendly charts that make sense of your user growth and feature adoption data.</p>
+          </div>
+          
+          <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-lg">
+            <div class="text-xs text-indigo-600 font-bold mb-4">Active Users This Month</div>
+            <div class="space-y-2">
+              <div class="flex items-center gap-3">
+                <span class="w-16 text-xs text-gray-600">Week 1</span>
+                <div class="flex-1 bg-gray-200 rounded-full h-3">
+                  <div class="bg-gradient-to-r from-indigo-400 to-purple-500 h-3 rounded-full" style="width: 30%;"></div>
+                </div>
+                <span class="text-xs font-bold text-gray-700">30</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="w-16 text-xs text-gray-600">Week 2</span>
+                <div class="flex-1 bg-gray-200 rounded-full h-3">
+                  <div class="bg-gradient-to-r from-indigo-400 to-purple-500 h-3 rounded-full" style="width: 50%;"></div>
+                </div>
+                <span class="text-xs font-bold text-gray-700">50</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="w-16 text-xs text-gray-600">Week 3</span>
+                <div class="flex-1 bg-gray-200 rounded-full h-3">
+                  <div class="bg-gradient-to-r from-indigo-400 to-purple-500 h-3 rounded-full" style="width: 70%;"></div>
+                </div>
+                <span class="text-xs font-bold text-gray-700">70</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="w-16 text-xs text-gray-600">Week 4</span>
+                <div class="flex-1 bg-gray-200 rounded-full h-3">
+                  <div class="bg-gradient-to-r from-indigo-400 to-purple-500 h-3 rounded-full" style="width: 90%;"></div>
+                </div>
+                <span class="text-xs font-bold text-gray-700">90</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="text-center mb-20">
+      <div class="glass-morphism bg-white/60 rounded-3xl p-12 max-w-4xl mx-auto">
+        <h3 class="text-3xl font-black gradient-text mb-8">Join 500+ Founders Already on the Waitlist</h3>
+        <div class="flex flex-wrap justify-center items-center gap-8 opacity-60">
+          <div class="text-2xl font-bold text-gray-600">TechStars</div>
+          <div class="text-2xl font-bold text-gray-600">Y Combinator</div>
+          <div class="text-2xl font-bold text-gray-600">500 Startups</div>
+          <div class="text-2xl font-bold text-gray-600">Founder Groups</div>
+        </div>
+        <p class="text-gray-600 mt-6 text-lg">Trusted by founders from top accelerators and startup communities worldwide.</p>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="text-center">
+      <div class="max-w-2xl mx-auto">
+        <h3 class="text-4xl font-black gradient-text mb-6">Ready to Build with AI?</h3>
+        <p class="text-xl text-gray-600 mb-8">Join the waitlist now and be among the first to experience the future of startup building.</p>
+        <a href="#waitlistForm" 
+           class="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white text-xl font-black rounded-xl shadow-2xl hover:scale-105 hover:shadow-orange-500/25 transition-all duration-300 pulse-glow">
+          Get Early Access →
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const form = document.getElementById('waitlistForm');
+    const confirmation = document.getElementById('confirmation');
+    
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Add loading state
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalText = submitBtn.innerHTML;
+      submitBtn.innerHTML = 'Joining...';
+      submitBtn.disabled = true;
+      
+      const data = {
+        name: form.name.value,
+        email: form.email.value,
+        saas: form.saas.value,
+        timestamp: new Date().toISOString()
+      };
+      
+      fetch('https://sheetdb.io/api/v1/gnyffwfewupfg', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ data })
+      })
+      .then(response => {
+        if (response.ok) {
+          confirmation.classList.remove('hidden');
+          form.reset();
+          // Add success animation
+          confirmation.style.animation = 'fadeInUp 0.5s ease-out';
+        } else {
+          throw new Error('Network response was not ok');
+        }
+      })
+      .catch(() => {
+        alert('Failed to join waitlist. Please try again or contact support.');
+      })
+      .finally(() => {
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+      });
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
