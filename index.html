@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>myfounder – Join the SaaS Waitlist</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-pink-100 via-white to-blue-100 min-h-screen flex flex-col items-center justify-center font-sans antialiased">
+  <main class="w-full max-w-lg mx-auto px-4">
+    <!-- Hero Section -->
+    <section class="flex flex-col items-center mb-8">
+      <span class="mb-4 rounded-full px-4 py-1 border border-blue-200 bg-blue-50 font-medium text-blue-700 text-xs uppercase tracking-wide shadow">Beta Access</span>
+      <h1 class="text-4xl md:text-5xl font-extrabold text-blue-800 mb-4 text-center leading-tight drop-shadow-lg">Supercharge Your SaaS Journey</h1>
+      <p class="text-base md:text-xl text-gray-600 text-center mb-4 max-w-[90%] mx-auto">Join <b>myfounder</b> to connect, learn, and grow your SaaS or product. Get early access, sharing, and peer-support, all in one platform—<span class="text-blue-700 font-bold">founders helping founders</span>.</p>
+      <!-- Social proof -->
+      <div class="flex justify-center gap-2 mb-4">
+        <span class="inline-flex items-center text-xs font-medium bg-white/60 backdrop-blur rounded px-3 py-1 shadow ring-1 ring-gray-200">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-4 h-4 mr-1 text-green-400"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+          400+ SaaS signups
+        </span>
+        <span class="inline-flex items-center text-xs font-medium bg-white/60 backdrop-blur rounded px-3 py-1 shadow ring-1 ring-gray-200">
+          🚀 Early Bird = Free for Life
+        </span>
+      </div>
+    </section>
+
+    <!-- Waitlist Card & Form -->
+    <section class="rounded-2xl shadow-2xl bg-white/90 backdrop-blur border border-blue-100 p-8 relative">
+      <h2 class="text-2xl font-bold text-blue-800 mb-2">Get On the Waitlist</h2>
+      <p class="text-gray-500 text-sm mb-6">Secure your spot! Early access includes feature voting, exclusive events, and lifetime perks.</p>
+      <form class="space-y-4" id="waitlistForm" autocomplete="on">
+        <div>
+          <label class="block text-sm font-medium text-blue-700 mb-1" for="name">Name</label>
+          <input required name="name" id="name" type="text" placeholder="Your Name" class="w-full rounded-lg border border-blue-200 bg-blue-50 px-4 py-3 text-blue-900 focus:ring-2 focus:ring-blue-400 focus:outline-none" />
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-blue-700 mb-1" for="email">Email</label>
+          <input required name="email" id="email" type="email" placeholder="you@company.com" class="w-full rounded-lg border border-blue-200 bg-blue-50 px-4 py-3 text-blue-900 focus:ring-2 focus:ring-blue-400 focus:outline-none" />
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-blue-700 mb-1" for="saas">Your SaaS / Product</label>
+          <input required name="saas" id="saas" type="text" placeholder="e.g. https://yoursaas.com" class="w-full rounded-lg border border-blue-200 bg-blue-50 px-4 py-3 text-blue-900 focus:ring-2 focus:ring-blue-400 focus:outline-none" />
+        </div>
+        <button type="submit" class="w-full py-3 mt-4 rounded-lg bg-gradient-to-r from-blue-600 to-pink-500 text-white text-lg font-extrabold drop-shadow-lg transition-transform hover:scale-105 hover:from-blue-700 hover:to-pink-600">Join Now →</button>
+      </form>
+      <p id="confirmation" class="mt-6 hidden text-center text-green-700 font-semibold text-lg">✅ Thanks! You’re on the list. We’ll reach out soon.</p>
+      <!-- Launch date, optional -->
+      <div class="absolute -top-6 right-4 rounded-lg bg-white/80 px-3 py-1 shadow border font-mono text-xs text-blue-800">Launching Nov 2025</div>
+    </section>
+    <!-- Optional: Countdown, testimonial, social sharing, more info below -->
+  </main>
+  <!-- Form action -->
+  <script>
+    const form = document.getElementById('waitlistForm');
+    const confirmation = document.getElementById('confirmation');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const data = {
+        name: form.name.value,
+        email: form.email.value,
+        saas: form.saas.value
+      };
+      fetch('https://sheetdb.io/api/v1/gnyffwfewupfg', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ data })
+      })
+      .then(response => {
+        if (response.ok) {
+          confirmation.classList.remove('hidden');
+          form.reset();
+        } else {
+          alert('Failed to join waitlist. Please try again.');
+        }
+      })
+      .catch(() => {
+        alert('Failed to join waitlist. Please try again.');
+      });
+    });
+  </script>
+</body>
+</html>
